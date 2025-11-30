@@ -73,11 +73,16 @@
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <button onclick="copyToClipboard()" class="inline-flex justify-center items-center rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 transition-all active:scale-95 group">
                     <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
-                    Copy PACK Standard
+                    Copy PACK Standard (MD format)
                 </button>
-                <a href="PACK_SOP.md" download class="inline-flex justify-center items-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50 transition-all">
-                    Download PACK_SOP.md
-                </a>
+                <div class="flex gap-2 justify-center">
+                    <a href="PACK_SOP.md" download class="inline-flex justify-center items-center rounded-lg bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50 transition-all" title="Download Markdown Source">
+                        Download PACK_SOP.md
+                    </a>
+                    <a href="PACK_SOP.html" download class="inline-flex justify-center items-center rounded-lg bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50 transition-all" title="Download Printable HTML">
+                        Display HTML version of SOP
+                    </a>
+                </div>
             </div>
             <div id="copy-toast" class="opacity-0 transition-opacity duration-300 mt-3 text-sm text-green-600 font-medium h-5"></div>
         </div>
@@ -191,7 +196,7 @@ These protocols align laboratory workflows with **[NIH Policy NOT-OD-21-013](htt
 
         // Fetch and display the markdown content dynamically
         document.addEventListener('DOMContentLoaded', () => {
-            // Using a try-catch block inside an async function to handle synchronous errors in fetch (like blob URL parsing issues)
+            // Using a try-catch block inside an async function to handle synchronous errors in fetch
             (async () => {
                 try {
                     const response = await fetch('PACK_SOP.md');
@@ -199,7 +204,7 @@ These protocols align laboratory workflows with **[NIH Policy NOT-OD-21-013](htt
                     const text = await response.text();
                     document.getElementById('markdown-text').innerText = text;
                 } catch (error) {
-                    console.warn('Fetch failed (likely due to local/preview environment). Loading fallback content.', error);
+                    console.warn('Fetch failed. Loading fallback content.', error);
                     document.getElementById('markdown-text').innerText = FALLBACK_MD;
                 }
             })();

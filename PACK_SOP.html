@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PACK: Standard Operating Procedures (v2025.1)</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.5;
+            color: #000;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 1in;
+        }
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 24pt;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            font-family: Arial, sans-serif;
+            font-size: 14pt;
+            color: #333;
+            margin-top: 2em;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        .header-meta {
+            font-family: Arial, sans-serif;
+            font-size: 10pt;
+            color: #555;
+            margin-bottom: 2em;
+        }
+        .disclaimer-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            font-size: 10pt;
+            margin-bottom: 2em;
+        }
+        .policy-tag {
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 9pt;
+            color: #444;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 5px;
+        }
+        ul { margin-top: 5px; }
+        li { margin-bottom: 8px; }
+        @media print {
+            body { padding: 0; }
+            a { text-decoration: none; color: #000; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PACK: Preservation & Access Compliance Kit</h1>
+    <div class="header-meta">
+        <strong>Document Type:</strong> Standard Operating Procedures<br>
+        <strong>Version:</strong> 2025.1<br>
+        <strong>Effective Date:</strong> Immediate
+    </div>
+
+    <div class="disclaimer-box">
+        <strong>SCOPE & DISCLAIMER:</strong> This protocol suite addresses technical workflows for data continuity, redundancy, and attribution. It is designed to satisfy specific sub-sections of federal data mandates (NOT-OD-21-013). It is not a comprehensive legal compliance program. Adherence to these protocols does not substitute for Institutional Review Board (IRB) approval, HIPAA compliance, or Export Control regulations.
+    </div>
+
+    <p>These protocols align laboratory workflows with <strong>NIH Policy NOT-OD-21-013</strong> (Data Management and Sharing) and the <strong>OSTP "Nelson Memo"</strong>, ensuring the persistence, findability, and attribution of research outputs.</p>
+
+    <h2>1. Preservation (Version Control)</h2>
+    <span class="policy-tag">Compliance Basis: NIH NOT-OD-21-013 (Data Preservation)</span>
+    <ul>
+        <li><strong>Redundant Forking:</strong> To mitigate "Bus Factor" risks (loss of key personnel), all researchers must maintain a personal Fork of active repositories. This ensures a distributed backup exists if the primary lab repo faces administrative lockout or corruption.</li>
+        <li><strong>Frequency:</strong> Code pushes should occur daily to ensure continuity.</li>
+    </ul>
+
+    <h2>2. Access (Persistent Identifiers)</h2>
+    <span class="policy-tag">Compliance Basis: NIH NOT-OD-21-016 (Repository Selection)</span>
+    <ul>
+        <li><strong>Zenodo Integration:</strong> Major releases must be archived via Zenodo to generate a <strong>DOI (Digital Object Identifier)</strong>.</li>
+        <li><strong>Compliance:</strong> This satisfies the "Findability" requirement of FAIR data principles and provides an immutable record for grant reporting.</li>
+    </ul>
+
+    <h2>3. Metadata (Attribution & Reuse)</h2>
+    <span class="policy-tag">Compliance Basis: Data Reuse (Element 3 of DMS Plans)</span>
+    <ul>
+        <li><strong>CRediT Tracking:</strong> Projects must initiate with an Authorship MOU based on the <strong>Contributor Roles Taxonomy</strong>.</li>
+        <li><strong>Audit Trail:</strong> Researchers should submit brief email recaps following supervisory meetings to create a searchable log of experimental pivots and decisions.</li>
+    </ul>
+
+    <h2>4. Integrity (Preregistration)</h2>
+    <span class="policy-tag">Compliance Basis: NIH NOT-OD-15-103 (Enhancing Reproducibility)</span>
+    <ul>
+        <li>Confirmatory studies must be preregistered on the <strong>Open Science Framework (OSF)</strong>. This establishes a public, immutable timestamp of intellectual property and study design.</li>
+    </ul>
+
+    <h2>5. Continuity (Departure Protocol)</h2>
+    <span class="policy-tag">Compliance Basis: Access Continuity</span>
+    <ul>
+        <li>Researchers must certify their Personal Forks are synced with the Lab Remote prior to departure.</li>
+        <li>Researchers should retain local copies of correspondence and data dictionaries to assist with future post-publication inquiries or audit requests.</li>
+    </ul>
+
+</body>
+</html>
