@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Authority -->
+    <title>PACK | Preservation & Access Compliance Kit</title>
+    <meta name="description" content="The Preservation & Access Compliance Kit (PACK). Turnkey protocols for meeting 2025 NIH/NSF Data Management and Sharing mandates.">
+    
+    <!-- Embedded Favicon (Blue Checklist) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%231e3a8a%22/><text x=%2250%22 y=%2250%22 font-size=%2250%22 text-anchor=%22middle%22 dy=%22.35em%22 fill=%22white%22>✓</text></svg>">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "PACK: Preservation & Access Compliance Kit",
+      "description": "Standard Operating Procedures for federal data mandate compliance.",
+      "proficiencyLevel": "Expert",
+      "audience": "Principal Investigators",
+      "datePublished": "2025-01-01"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+                              linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, transparent, 10%, black, 90%, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, 5%, black, 95%, transparent);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Navbar -->
+    <nav class="border-b border-slate-200 bg-white/80 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <span class="text-lg font-bold tracking-tight text-slate-900">OpenProtocols</span>
+                    <span class="text-slate-300">/</span>
+                    <span class="text-sm font-mono font-semibold text-blue-700 bg-blue-50 px-2 py-1 rounded">PACK</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="hidden sm:inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
+                        NIH NOT-OD-21-013 Compliant
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-20 pb-20 border-b border-slate-200 overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none"></div>
+        
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl mb-6">
+                The <span class="text-blue-700">P</span>reservation & <span class="text-blue-700">A</span>ccess <br>
+                <span class="text-blue-700">C</span>ompliance <span class="text-blue-700">K</span>it
+            </h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-10">
+                A standardized continuity architecture designed to meet the 2025 Federal Data Management & Sharing (DMS) mandates. Ensure your lab is audit-ready.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button onclick="copyToClipboard()" class="inline-flex justify-center items-center rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 transition-all active:scale-95 group">
+                    <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                    Copy PACK Standard
+                </button>
+                <a href="PACK_SOP.md" download class="inline-flex justify-center items-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50 transition-all">
+                    Download PACK_SOP.md
+                </a>
+            </div>
+            <div id="copy-toast" class="opacity-0 transition-opacity duration-300 mt-3 text-sm text-green-600 font-medium h-5"></div>
+        </div>
+    </div>
+
+    <!-- Protocols Preview -->
+    <div id="protocols" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-l-4 border-blue-600 pl-6 mb-12">
+                <h2 class="text-2xl font-bold tracking-tight text-slate-900">Protocol Overview</h2>
+                <p class="mt-2 text-slate-600">The PACK standard integrates three redundant layers of data security.</p>
+            </div>
+            
+            <div class="grid gap-8">
+                <!-- P1 -->
+                <div class="flex gap-4">
+                    <div class="flex-none w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-700 font-bold border border-blue-100">01</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-900">Version Control Redundancy</h3>
+                        <div class="mt-1 text-sm font-mono text-slate-500 mb-2">Compliance: <a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html" class="underline hover:text-blue-600" target="_blank">NIH NOT-OD-21-013</a></div>
+                        <p class="text-slate-600 mt-1">Mandates a <strong>Fork-Based Workflow</strong> to eliminate single points of failure (SPOF) in data storage, satisfying NIH "Preservation" requirements.</p>
+                    </div>
+                </div>
+                <!-- P2 -->
+                <div class="flex gap-4">
+                    <div class="flex-none w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-700 font-bold border border-blue-100">02</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-900">Persistent Identifiers (PIDs)</h3>
+                        <div class="mt-1 text-sm font-mono text-slate-500 mb-2">Compliance: <a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-016.html" class="underline hover:text-blue-600" target="_blank">NIH NOT-OD-21-016</a></div>
+                        <p class="text-slate-600 mt-1">Automates the generation of DOIs via <a href="https://zenodo.org" class="underline hover:text-blue-600" target="_blank">Zenodo Integration</a>, ensuring all code releases meet the "Findability" standard of FAIR data principles.</p>
+                    </div>
+                </div>
+                <!-- P3 -->
+                <div class="flex gap-4">
+                    <div class="flex-none w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-700 font-bold border border-blue-100">03</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-900">Attribution Metadata</h3>
+                        <div class="mt-1 text-sm font-mono text-slate-500 mb-2">Compliance: Data Reuse (Element 3)</div>
+                        <p class="text-slate-600 mt-1">Implements <a href="https://credit.niso.org" class="underline hover:text-blue-600" target="_blank">CRediT Taxonomy</a> tracking for all contributions, creating a verifiable audit trail for annual RPPR grant reporting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scope Disclaimer -->
+    <div class="bg-yellow-50 py-8 border-y border-yellow-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm text-yellow-800">
+                <strong>Scope of Utility:</strong> This protocol suite addresses specific technical requirements for data preservation and persistent identifiers. It does not constitute a comprehensive Data Management and Sharing (DMS) Plan nor does it replace institutional guidance regarding human subjects (IRB), financial compliance, or intellectual property restrictions.
+            </p>
+        </div>
+    </div>
+
+    <!-- Source Code Viewer -->
+    <div class="bg-slate-900 py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-sm font-semibold text-slate-400">PACK_SOP.md (Source)</h3>
+                <span class="text-xs font-mono text-slate-500">v2025.1</span>
+            </div>
+            <div class="bg-slate-800 rounded-lg p-6 font-mono text-xs text-slate-400 overflow-x-auto shadow-inner border border-slate-700">
+                <!-- Dynamically populated content -->
+                <pre id="markdown-text">Loading protocol source...</pre>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 border-t border-slate-800 py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-xs text-slate-500">
+                An <a href="https://github.com/OpenProtocols" class="underline hover:text-white">OpenProtocols</a> Initiative. Released under <a href="https://creativecommons.org/licenses/by/4.0/" class="underline hover:text-white">CC-BY 4.0 International</a>.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Fallback content for when fetch fails (e.g., local preview or missing file)
+        const FALLBACK_MD = `# PACK: Preservation & Access Compliance Kit
+**Standard Operating Procedures (v2025.1)**
+
+## Scope & Disclaimer
+This protocol suite addresses technical workflows for data continuity, redundancy, and attribution. It is designed to satisfy specific sub-sections of federal data mandates (NOT-OD-21-013). **It is not a comprehensive legal compliance program.** Adherence to these protocols does not substitute for Institutional Review Board (IRB) approval, HIPAA compliance, or Export Control regulations.
+
+## Regulatory Alignment
+These protocols align laboratory workflows with **[NIH Policy NOT-OD-21-013](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html)** (Data Management and Sharing) and the **[OSTP "Nelson Memo"](https://www.whitehouse.gov/wp-content/uploads/2022/08/08-2022-OSTP-Public-Access-Memo.pdf)**, ensuring the persistence, findability, and attribution of research outputs.
+
+## 1. Preservation (Version Control)
+**Policy Basis:** NIH NOT-OD-21-013 requires "preservation of scientific data" regardless of personnel changes.
+* **Redundant Forking:** To mitigate "Bus Factor" risks, all researchers must maintain a personal Fork of active repositories. This ensures a distributed backup exists if the primary lab repo faces administrative lockout or corruption.
+* **Frequency:** Code pushes should occur daily to ensure continuity.
+
+## 2. Access (Persistent Identifiers)
+**Policy Basis:** **[NIH NOT-OD-21-016](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-016.html)** prioritizes repositories that "Assign Unique Persistent Identifiers (PIDs)."
+* **Zenodo Integration:** Major releases must be archived via **[Zenodo](https://zenodo.org)** to generate a **DOI (Digital Object Identifier)**.
+* **Compliance:** This satisfies the "Findability" requirement of FAIR data principles and provides an immutable record for grant reporting.
+
+## 3. Metadata (Attribution & Reuse)
+**Policy Basis:** Clear metadata is required for "Data Reuse" (Element 3 of DMS Plans).
+* **CRediT Tracking:** Projects must initiate with an Authorship MOU based on the **[Contributor Roles Taxonomy](https://credit.niso.org)**.
+* **Audit Trail:** Researchers should submit brief email recaps following supervisory meetings to create a searchable log of experimental pivots and decisions.
+
+## 4. Integrity (Preregistration)
+**Policy Basis:** Enhances rigor per NIH "Enhancing Reproducibility" (**[NOT-OD-15-103](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-103.html)**).
+* Confirmatory studies must be preregistered on the **[Open Science Framework (OSF)](https://osf.io)**. This establishes a public, immutable timestamp of intellectual property and study design.
+
+## 5. Continuity (Departure Protocol)
+**Policy Basis:** Ensures data remains accessible "at the end of the performance period."
+* Researchers must certify their Personal Forks are synced with the Lab Remote prior to departure.
+* Researchers should retain local copies of correspondence and data dictionaries to assist with future post-publication inquiries or audits.`;
+
+        // Fetch and display the markdown content dynamically
+        document.addEventListener('DOMContentLoaded', () => {
+            // Using a try-catch block inside an async function to handle synchronous errors in fetch (like blob URL parsing issues)
+            (async () => {
+                try {
+                    const response = await fetch('PACK_SOP.md');
+                    if (!response.ok) throw new Error('Failed to load protocol file');
+                    const text = await response.text();
+                    document.getElementById('markdown-text').innerText = text;
+                } catch (error) {
+                    console.warn('Fetch failed (likely due to local/preview environment). Loading fallback content.', error);
+                    document.getElementById('markdown-text').innerText = FALLBACK_MD;
+                }
+            })();
+        });
+
+        function copyToClipboard() {
+            const text = document.getElementById('markdown-text').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById('copy-toast');
+                toast.innerText = '✓ Standard copied to clipboard';
+                toast.classList.remove('opacity-0');
+                setTimeout(() => {
+                    toast.classList.add('opacity-0');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
